@@ -1,4 +1,4 @@
-######################################## ALl practicals of following subjects:- #################################################
+##### All practicals of following subjects:- #####
 # OOP in Java
 # Microprocessor Architecture
 # Computer Networks
