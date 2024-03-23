@@ -14,13 +14,7 @@ app.use(bodyParser.urlencoded({
 
 app.post("/feedback", (req, res) => {
     console.log("It is running.");
-    let feedback="| "+req.body.feedback+"\n";
-    fs.appendFile("public/feedback.txt", feedback, (err) => {
-        if (err)
-          console.log("Find error RaR"+err);
-        else
-            return res.redirect("/public/index.htm");
-      });
+    res.send("hello");
 });
 
 app.get("/", (req, res) => {
