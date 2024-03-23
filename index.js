@@ -18,7 +18,7 @@ app.post("/fb", (req, res) => {
         if (err)
           console.log(err);
         else
-          res.redirect("index.htm");   
+          res.send("<h1> Thanks for your feedback! </h1>");
       });
 });
 
