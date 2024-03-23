@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON and URL-encoded form data
 app.use(bodyParser.json());
+app.use(express.static('public');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Route to handle form submissions
