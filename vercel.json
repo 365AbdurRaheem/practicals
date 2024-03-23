@@ -5,7 +5,7 @@
     "myFunction": {
       "maxDuration": 30 // or any other timeout value in seconds
     }
-  }
+  },
   "builds": [
     {
       "src": "index.js",
