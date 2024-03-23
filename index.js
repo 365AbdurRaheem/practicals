@@ -13,13 +13,12 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.post("/feedback", (req, res) => {
-    console.log("It is running.");
     let feedback="| "+req.body.feedback+"\n";
     fs.appendFile("public/feedback.txt", feedback, (err) => {
         if (err)
-          console.log("Find error RaR"+err);
+          res.send("<h1> Error a gya Boss </h1>");
         else
-            return res.redirect("/public/index.htm");
+            res.send("<h1> Thanks for your feedback! </h1>");
       });
 });
 
