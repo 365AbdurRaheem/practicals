@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
     res.set({
         "Allow-access-Allow-Origin":"*"
     })
-    return res.redirect("index.htm");
+
 
 }).listen(PORT);
 console.log("Listening on port "+PORT);
