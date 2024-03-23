@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 
 app.post("/fb", (req, res) => {
     let feedback="| "+req.body.feedback+"\n";
-    fs.appendFile("public/feeddback.txt", feedback, (err) => {
+    fs.appendFile("public/feedback.txt", feedback, (err) => {
         if (err)
           console.log("Find error RaR"+err);
         else
