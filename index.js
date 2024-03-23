@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 
 app.post("/fb", (req, res) => {
     let feedback="| "+req.body.feedback+"\n";
-    fs.appendFile("public/feedback.txt", feedback, (err) => {
+    fs.appendFile("feedback.txt", feedback, (err) => {
         if (err)
           console.log("Find error RaR"+err);
         else
@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
     res.set({
         "Allow-access-Allow-Origin":"*"
     })
-    return res.redirect("/");
+    return res.redirect("public/index.htm");
 }).listen(PORT);
 console.log("Listening on port "+PORT);
 
