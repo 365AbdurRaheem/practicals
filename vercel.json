@@ -12,7 +12,6 @@
     }
   ],
   "routes": [
-    { "handle": "filesystem" },
     {
       "src": "/",
       "dest": "/public/index.htm"
@@ -21,5 +20,12 @@
       "src": "/fb",
       "dest": "/"
     }
-  ]
+  ],
+  {
+  "functions": {
+    "app/api/**/*": {
+      "maxDuration": 5
+    }
+  }
+}
 }
