@@ -1,4 +1,9 @@
 {
+  functions": {
+    "app/api/**/*": {
+      "maxDuration": 5
+    }
+  },
   "version": 2,
   "name": "practicals",
   "builds": [
