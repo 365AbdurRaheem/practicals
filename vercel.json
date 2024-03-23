@@ -15,10 +15,6 @@
     {
       "src": "/",
       "dest": "/public/index.htm"
-    },
-    {
-      "src": "/fb",
-      "dest": "/"
     }
   ]
 }
