@@ -3,7 +3,7 @@
   "name": "practicals",
    "functions": {
     "myFunction": {
-      "maxDuration": 30 // or any other timeout value in seconds
+      "maxDuration": 30
     }
   },
   "builds": [
