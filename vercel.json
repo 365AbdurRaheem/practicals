@@ -14,11 +14,11 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/public/**"
+      "dest": "/public/index.htm"
     },
     {
       "src": "/fb",
-      "dest": "/public/index.htm"
+      "dest": "/"
     }
   ]
 }
