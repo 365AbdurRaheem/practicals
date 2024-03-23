@@ -12,6 +12,7 @@
     }
   ],
   "routes": [
+    { "handle": "filesystem" },
     {
       "src": "/",
       "dest": "/public/index.htm"
