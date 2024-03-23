@@ -20,7 +20,10 @@ app.post("/fb", (req, res) => {
     //     else
     //         return res.redirect("/public/index.htm");
     //   });
+    try{
     res.send("its working")
+    }
+    catch(err) => console.log("Error to ha"+err);
 });
 
 app.get("/", (req, res) => {
