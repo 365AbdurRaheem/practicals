@@ -12,6 +12,6 @@
     }
   ],
   "routes": [
-    { "src": "/feedback", "dest": "/api/feedback" }
+    { "src": "/", "dest": "/api/feedback" }
   ]
 }
