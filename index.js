@@ -18,7 +18,7 @@ app.post("/fb", (req, res) => {
         if (err)
           console.log("Find error RaR"+err);
         else
-            return res.redirect("/");
+            return res.redirect("/public/index.htm");
       });
 });
 
