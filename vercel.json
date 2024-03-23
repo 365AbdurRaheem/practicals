@@ -1,6 +1,11 @@
 {
   "version": 2,
   "name": "practicals",
+   "functions": {
+    "myFunction": {
+      "maxDuration": 30 // or any other timeout value in seconds
+    }
+  }
   "builds": [
     {
       "src": "index.js",
