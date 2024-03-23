@@ -13,17 +13,13 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.post("/fb", (req, res) => {
-    // let feedback="| "+req.body.feedback+"\n";
-    // fs.appendFile("public/feedback.txt", feedback, (err) => {
-    //     if (err)
-    //       console.log("Find error RaR"+err);
-    //     else
-    //         return res.redirect("/public/index.htm");
-    //   });
-    try{
-    res.send("its working")
-    }
-    catch(err) => console.log("Error to ha"+err);
+    let feedback="| "+req.body.feedback+"\n";
+    fs.appendFile("public/feedback.txt", feedback, (err) => {
+        if (err)
+          console.log("Find error RaR"+err);
+        else
+            return res.redirect("/public/index.htm");
+      });
 });
 
 app.get("/", (req, res) => {
