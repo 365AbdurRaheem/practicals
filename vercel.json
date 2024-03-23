@@ -1,9 +1,4 @@
 {
- "functions": {
-    "/**": {
-      "maxDuration": 30
-     }
-   },
   "version": 2,
   "name": "practicals",
   "builds": [
