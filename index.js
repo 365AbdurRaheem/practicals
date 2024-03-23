@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
     extended:true
 }));
 
-app.post("/fb", (req, res) => {
+app.get("/fb", (req, res) => {
     let feedback="| "+req.body.feedback+"\n";
     fs.appendFile("public/feedback.txt", feedback, (err) => {
         if (err)
