@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 
 app.post("/feedback", (req, res) => {
     let feedback="| "+req.body.feedback+"\n";
-    fs.appendFile("public/feedback.txt", feedback, (err) => {
+    fs.appendFile("/feedback.txt", feedback, (err) => {
         if (err)
           res.send("<h1> Error a gya Boss </h1>");
         else
