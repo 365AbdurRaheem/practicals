@@ -17,8 +17,6 @@ app.post("/fb", (req, res) => {
     fs.appendFile("public/feedback.txt", feedback, (err) => {
         if (err)
           console.log(err);
-        else
-          res.redirect("/");
       });
 });
 
