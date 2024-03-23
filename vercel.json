@@ -1,11 +1,9 @@
 {
   "version": 2,
   "name": "practicals",
-   "functions": [
-    {
+   "functions":{
       "maxDuration": 30
-    }
-   ],
+    },
   "builds": [
     {
       "src": "index.js",
