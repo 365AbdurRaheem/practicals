@@ -1,6 +1,6 @@
 const express=require("express");
 const bodyParser=require("body-parser");
-const fs=require("fs");
+const mongoose=require("mongoose");
 
 const PORT = process.env.PORT || 3000;
 
@@ -12,20 +12,31 @@ app.use(bodyParser.urlencoded({
     extended:true
 }));
 
+mongoose.connect("mongodb+srv://Raheem:remi1234@cluster0.wjyzzz0.mongodb.net/feedbackDB?retryWrites=true&w=majority&appName=Cluster0");
+const db=mongoose.connection;
+
+db.on("error", () => console.log("Error in DB"));
+db.on("open", () => console.log("Connected to DB"));
+
 app.post("/feedback", (req, res) => {
+
     let feedback=req.body.feedback;
-    fs.appendFile("feedback.txt", feedback, (err) => {
+    
+    let data={
+        "Feedback": feedback,
+    }
+    db.collection("feedbacks").insertOne(data, (err, collection) => {
         if (err)
           res.send("<h1> Error a gya Boss </h1>");
         else
             res.send("<h1> Thanks for your feedback! </h1>");
-      });
+    })
 });
 
 app.get("/", (req, res) => {
     res.set({
         "Allow-access-Allow-Origin":"*"
     })
-    return res.redirect("public/index.htm");
+    return res.redirect("/public/index.htm");
 }).listen(PORT);
 console.log("Listening on port "+PORT)
