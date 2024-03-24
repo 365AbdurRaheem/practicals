@@ -14,7 +14,11 @@
   "rewrites": [
     { 
       "source": "/(.*)",
-      "destination": "/",
+      "destination": "/"
+    }
+  ],
+  "routes": [
+    {
       "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
     }
   ]
