@@ -23,10 +23,10 @@ app.post("/feedback", (req, res) => {
         "Feedback": feedback,
     }
     db.collection("feedbacks").insertOne(data, (err, collection) => {
+        setTimeout({
         if (err)
           res.send("<h1> Error a gya Boss </h1>");
         else
-            setTimeout({
             res.send("<h1> Thanks for your feedback! </h1>");
             }, 15000);
     })
