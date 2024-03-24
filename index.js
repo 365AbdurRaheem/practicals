@@ -26,7 +26,9 @@ app.post("/feedback", (req, res) => {
         if (err)
           res.send("<h1> Error a gya Boss </h1>");
         else
+            setTimeout({
             res.send("<h1> Thanks for your feedback! </h1>");
+            }, 15000);
     })
 });
 
