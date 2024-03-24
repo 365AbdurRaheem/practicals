@@ -15,20 +15,18 @@ app.use(bodyParser.urlencoded({
 mongoose.connect("mongodb+srv://Raheem:remi1234@cluster0.wjyzzz0.mongodb.net/feedbackDB?retryWrites=true&w=majority&appName=Cluster0");
 const db=mongoose.connection;
 
-app.post("/feedback", (req, res) => {
+app.post("/feedback", async(req, res) => {
 
     let feedback=req.body.feedback;
     
     let data={
         "Feedback": feedback,
     }
-    db.collection("feedbacks").insertOne(data, (err, collection) => {
-        setTimeout({
+   await db.collection("feedbacks").insertOne(data, (err, collection) => {
         if (err)
           res.send("<h1> Error a gya Boss </h1>");
         else
             res.send("<h1> Thanks for your feedback! </h1>");
-            }, 15000);
     })
 });
 
