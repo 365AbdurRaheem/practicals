@@ -2,10 +2,15 @@ const express=require("express");
 const bodyParser=require("body-parser");
 const mongoose=require("mongoose");
 const cors=require("cors");
+const corsConfig={
+    origin:"*",
+    Credential:true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+};
 const PORT = process.env.PORT || 3000;
 
 const app=express();
-app.use(cors());
+app.use(cors(corsConfig));
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
