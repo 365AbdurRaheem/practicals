@@ -15,9 +15,6 @@ app.use(bodyParser.urlencoded({
 mongoose.connect("mongodb+srv://Raheem:remi1234@cluster0.wjyzzz0.mongodb.net/feedbackDB?retryWrites=true&w=majority&appName=Cluster0");
 const db=mongoose.connection;
 
-db.on("error", () => console.log("Error in DB"));
-db.on("open", () => console.log("Connected to DB"));
-
 app.post("/feedback", (req, res) => {
 
     let feedback=req.body.feedback;
