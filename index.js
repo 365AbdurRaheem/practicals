@@ -10,6 +10,7 @@ const corsConfig={
 const PORT = process.env.PORT || 3000;
 
 const app=express();
+app.options("", cors(corsConfig));
 app.use(cors(corsConfig));
 
 app.use(bodyParser.json());
