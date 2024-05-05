@@ -89,8 +89,17 @@
             </div>
           </div>
           <p class="guide">Click the Subject Code to download practicals!</p>
-          <p class="cr">All rights are reserved &copy; | April, 2024 Raja Abdur Raheem</p>
+          <p class="cr"></p>
     </div>
+
+    <script>
+  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const d = new Date();
+  let year = d.getFullYear();
+  let name = month[d.getMonth()];
+  document.querySelector(".cr").textContent=`All rights are reserved &copy; | ${name}, ${year} Raja Abdur Raheem`;
+        
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9ee624314e.js" crossorigin="anonymous"></script>
