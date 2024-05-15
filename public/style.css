@@ -143,7 +143,7 @@ p.cr{
           display: block;
         }
     .navbar{
-      padding-top: 30% ;
+      padding-top: 0% ;
     }
     .container-fluid .navbar-brand{
       position: absolute;
