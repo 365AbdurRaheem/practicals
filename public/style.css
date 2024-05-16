@@ -151,7 +151,5 @@ p.cr{
       left: 50%;
       transform: translateX(-50%);
       opacity: 0.7;
-      /* text-decoration: underline; */
-      border-bottom: 1px solid white;
     }
   }
