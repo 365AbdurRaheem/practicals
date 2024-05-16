@@ -139,9 +139,9 @@ p.cr{
     }
 }
   @media screen and (max-width:1000px) {
-        .collapse:not(.show) {
-          display: block;
-        }
+    .collapse:not(.show) {
+          display: block !important;
+    }
     .navbar{
       padding-top: 0% ;
     }
