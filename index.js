@@ -18,7 +18,8 @@ const db=mongoose.connection;
 app.post("/feedback", (req, res) => {
 
     let feedback=req.body.feedback;
-    
+    if(feedback != "")
+    {
     let data={
         "Feedback": feedback,
     }
@@ -28,6 +29,7 @@ app.post("/feedback", (req, res) => {
         else
             res.send("<h1> Thanks for your feedback! </h1>");
     })
+    }
 });
 
 app.get("/", (req, res) => {
