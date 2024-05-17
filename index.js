@@ -31,7 +31,7 @@ app.post("/feedback", (req, res) => {
     })
     }
     else
-        res.send("<h1> Don't send empty feedback. 🥺");
+        res.send("<h1> Don't send empty feedback. 🥺</h1>");
 });
 
 app.get("/", (req, res) => {
