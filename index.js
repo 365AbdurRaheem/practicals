@@ -18,7 +18,7 @@ const db=mongoose.connection;
 app.post("/feedback", (req, res) => {
 
     let feedback=req.body.feedback;
-    if(feedback.length() != 0)
+    if(feedback.length != 0)
     {
     let data={
         "Feedback": feedback,
