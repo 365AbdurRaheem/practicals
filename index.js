@@ -18,18 +18,20 @@ const db=mongoose.connection;
 app.post("/feedback", (req, res) => {
 
     let feedback=req.body.feedback;
-    if(feedback != "")
+    if(feedback.length() != 0)
     {
     let data={
         "Feedback": feedback,
     }
    db.collection("feedbacks").insertOne(data, (err, collection) => {
         if (err)
-          res.send("<h1> Error a gya Boss </h1>");
+          res.send("<h1> Error occured. 🥴</h1>");
         else
-            res.send("<h1> Thanks for your feedback! </h1>");
+            res.send("<h1> Thanks for your feedback! 🤗</h1>");
     })
     }
+    else
+        res.send("<h1> Don't send empty feedback. 🥺");
 });
 
 app.get("/", (req, res) => {
