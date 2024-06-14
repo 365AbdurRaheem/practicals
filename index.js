@@ -1,11 +1,13 @@
 const express=require("express");
 const bodyParser=require("body-parser");
 const mongoose=require("mongoose");
+const cors = require('cors');
 
 const PORT = process.env.PORT || 3000;
 
 const app=express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
@@ -35,9 +37,7 @@ app.post("/feedback", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.set({
-        "Allow-access-Allow-Origin":"*"
-    })
+    res.set("Access-Control-Allow-Origin", "*");
     return res.redirect("/public/index.htm");
 }).listen(PORT);
 console.log("Listening on port "+PORT)
